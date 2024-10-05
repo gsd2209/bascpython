@@ -1,8 +1,8 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render
 
 # Create your views here.
 def thirdView(request):
-    return HttpResponse('welcome to third page')
+    return render(request,'fourth.html')
 
 def fourthView(request):
-    return HttpResponse('welcome to fourth page')
+    return render(request,'third.html')
