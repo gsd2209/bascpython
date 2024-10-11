@@ -9,5 +9,6 @@ urlpatterns = [
     path('',authview.index),
     path('admin/', admin.site.urls),
     path('login',authview.loginView),
+    path('user/',include('user.urls'))
     
 ]
