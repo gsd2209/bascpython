@@ -1,12 +1,13 @@
 
 from django.contrib import admin
 from django.urls import path,include
-from firstapp import views as v
+from myauth import views as authview
+
 
 
 urlpatterns = [
-    path('',v.index),
+    path('',authview.index),
     path('admin/', admin.site.urls),
-    path('firstapp/',include('firstapp.urls')),
-    path('secondapp/',include('secondapp.urls'))
+    path('login',authview.loginView),
+    
 ]
