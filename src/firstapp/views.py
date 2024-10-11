@@ -7,3 +7,6 @@ def firstView(request):
 
 def secondView(request):
     return render(request,'second.html')
+
+def index(request):
+    return render(request,'index.html')
