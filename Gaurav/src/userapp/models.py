@@ -9,3 +9,11 @@ class User(models.Model):
 
     class Meta:
         db_table='entry'
+
+class Blogs(models.Model):
+    title = models.CharField(max_length=50, blank=True, null=True)
+    description = models.CharField(max_length=50, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'blogs'

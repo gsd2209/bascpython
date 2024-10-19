@@ -7,8 +7,6 @@
 </head>
 <body>
     <h1>all users</h1>
-    <h1>{{name}}</h1>
-    <h1>{{users}}</h1>
     <table border="1">
         <thead>
             <tr>
@@ -17,6 +15,7 @@
                 <th>City</th>
                 <th>Email</th>
                 <th>Password</th>
+                <th colspan="3">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -27,6 +26,11 @@
                 <td>{{user.city}}</td>
                 <td>{{user.email}}</td>
                 <td>{{user.password}}</td>
+                <td><a href="/crud/viewUser/{{user.id}}">View</a></td>
+                <td><a href="/crud/editUser/{{user.id}}">Edit</a></td>
+                <td><a href="/crud/deleteUser/{{user.id}}">Delete</a></td>
+
+
             </tr>
             {%endfor%}
         </tbody>
